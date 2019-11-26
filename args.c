@@ -17,7 +17,7 @@ char ** parse_args( char * line ){
 
 int main() {
   char line[100] = "ls -a -l";
-  printf("%s\n", line);
+  printf("Running the command: %s\n", line);
   char ** args = parse_args(line);
   execvp(args[0], args);
   return 0;
