@@ -5,10 +5,9 @@
 
 char ** parse_args( char * line ){
   int i = 0;
-  char * curr = line;
-  char ** tokens = malloc(6 * sizeof(curr));
-  while (curr != NULL){
-    tokens[i] = strsep(&curr, " ");
+  char ** tokens = malloc(6 * sizeof(line));
+  while (line != NULL){
+    tokens[i] = strsep(&line, " ");
     i++;
   }
   tokens[i] = NULL;
